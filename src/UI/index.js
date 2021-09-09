@@ -13,6 +13,7 @@ export const BoxContainer = styled.div `
     .graph{
 
         cursor: pointer;
+        margin: 1rem 0rem;
     }
 
 `
