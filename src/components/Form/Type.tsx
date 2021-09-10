@@ -13,7 +13,7 @@ const Select = styled.select`
   margin: 1rem;
   padding: 0.5rem;
   text-align: center;
-  width: 10rem;
+  width: 16rem;
 
   :hover {
     border-bottom: 2px solid purple;

@@ -29,10 +29,16 @@ const BoxGraph = styled.div `
 export default function Graph() {
  
 
+  const date = new Date();
+
+  const year = date.getUTCFullYear();
+
+  const month = date.getUTCMonth() + 1;
+
 
   return (
     <BoxGraph>
-      <TitleGraph>Events in $</TitleGraph>
+      <TitleGraph>Current events - {month} / {year} in $</TitleGraph>
       <Category />
       <Type />
       <Total />

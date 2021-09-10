@@ -21,17 +21,33 @@ export default function Category () {
   
     // filter array infos //
   
+    const date = new Date();
+    const month = date.getUTCMonth() + 1;
+    const year = date.getUTCFullYear();
+
     function getGain() {
     
-  
+
   
       if(currentFinancialEvent) {
   
         const gainFilter = currentFinancialEvent.filter(
           (item) => item.category === "Gain"
         );
+
+        const yearFlter = gainFilter.filter(
+          (item) => item.year === year
+        );
+
+        const monthFlter = yearFlter.filter(
+          (item) => item.month === month
+        );
+
+
+       
+
   
-        const gainInfo = gainFilter.reduce(function (accumulator, currentValue) {
+        const gainInfo = monthFlter.reduce(function (accumulator, currentValue) {
           return accumulator + JSON.parse(currentValue.value);
         }, 0);
     
@@ -52,8 +68,16 @@ export default function Category () {
         const spentFilter = currentFinancialEvent.filter(
           (item) => item.category === "Spent"
         );
+
+        const yearFlter = spentFilter.filter(
+          (item) => item.year === year
+        );
+
+        const monthFlter = yearFlter.filter(
+          (item) => item.month === month
+        );
   
-        const spentInfo = spentFilter.reduce(function (accumulator, currentValue) {
+        const spentInfo = monthFlter.reduce(function (accumulator, currentValue) {
           return accumulator + JSON.parse(currentValue.value);
         }, 0);
     
@@ -70,8 +94,17 @@ export default function Category () {
         const donationFilter = currentFinancialEvent.filter(
           (item) => item.category === "Donation"
         );
+
+        
+        const yearFlter = donationFilter.filter(
+          (item) => item.year === year
+        );
+
+        const monthFlter = yearFlter.filter(
+          (item) => item.month === month
+        );
     
-        const donationInfo = donationFilter.reduce(function (accumulator, currentValue) {
+        const donationInfo = monthFlter.reduce(function (accumulator, currentValue) {
           return accumulator + JSON.parse(currentValue.value);
         }, 0);
     

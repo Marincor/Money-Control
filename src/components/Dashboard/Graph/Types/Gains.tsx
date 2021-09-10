@@ -16,8 +16,13 @@ export default function Gains (){
     }, []);
 
     // filter array infos //
-  
     
+    const date = new Date();
+    const month = date.getUTCMonth() + 1;
+    const year = date.getUTCFullYear();
+    
+
+
       function getGains(type) {
        
     
@@ -30,7 +35,16 @@ export default function Gains (){
           );
 
 
-          const typeFilter = gainFilter.filter(
+          const yearFlter = gainFilter.filter(
+            (item) => item.year === year
+          );
+  
+          const monthFlter = yearFlter.filter(
+            (item) => item.month === month
+          );
+
+
+          const typeFilter = monthFlter.filter(
             (item) => item.type === `${type}`
           );
 
@@ -56,7 +70,7 @@ export default function Gains (){
   const data = {
     labels: ['salary', 'freelance job', 'others'], 
     datasets: [{
-      label: 'All Gains',
+      label: `All Gains in  ${month} - ${year}`,
       data: [getGains("Salary"), getGains("Freelance Job"), getGains("Others")],
       backgroundColor: [
         'rgba(11, 224, 107, 0.6)',

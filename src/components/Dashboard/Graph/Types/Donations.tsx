@@ -15,6 +15,9 @@ export default function Donations (){
 
     // filter array infos //
   
+    const date = new Date();
+    const month = date.getUTCMonth() + 1;
+    const year = date.getUTCFullYear();
     
       function getDonations(type) {
        
@@ -23,12 +26,20 @@ export default function Donations (){
         if(currentFinancialEvent) {
     
     
-          const gainFilter = currentFinancialEvent.filter(
+          const donationFilter = currentFinancialEvent.filter(
             (item) => item.category === "Donation"
           );
 
 
-          const typeFilter = gainFilter.filter(
+          const yearFlter = donationFilter.filter(
+            (item) => item.year === year
+          );
+  
+          const monthFlter = yearFlter.filter(
+            (item) => item.month === month
+          );
+
+          const typeFilter = monthFlter.filter(
             (item) => item.type === `${type}`
           );
 
@@ -50,7 +61,7 @@ export default function Donations (){
   const data = {
     labels: ['ong', 'natural person', 'political campaign', 'others'], 
     datasets: [{
-      label: 'All Donations',
+      label: `All Donations in  ${month} - ${year}`,
       data: [getDonations("ONG"), getDonations("Natural person"), getDonations("Political campaign"), getDonations("Others")],
       backgroundColor: [
         'rgba(233, 230, 38, 0.6)',

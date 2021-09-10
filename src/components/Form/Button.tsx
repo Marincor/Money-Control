@@ -18,30 +18,53 @@ export default function Button() {
   const {category, type, value, financialEvent, setFinancialEvent} = useContext(FormContext);
 
 
+  const date = new Date();
+  const month = date.getUTCMonth() + 1;
+  const year = date.getFullYear();
 
-  function registerFinancialEvent(e) {
 
-    e.preventDefault()
+
+
+  function registerFinancialEvent() {
+
+ 
+    if (category && type !== '') {
 
       if(category === 'Spent') {
         let vetorSpent = financialEvent || []
-        vetorSpent.push({category: category, type: type, value: value})
+        vetorSpent.push({category: category, type: type, value: value, year: year, month:month})
         setFinancialEvent(vetorSpent)
+        localStorage.setItem('Financial',JSON.stringify(financialEvent))
+
 
       } else if (category === 'Gain') {
         let vetorGain = financialEvent || []
-        vetorGain.push({category: category, type: type, value: value})
+        vetorGain.push({category: category, type: type, value: value, year: year, month:month})
         setFinancialEvent(vetorGain)
+        localStorage.setItem('Financial',JSON.stringify(financialEvent))
+
 
       } else {
         let vetorDonation = financialEvent || []
-        vetorDonation.push({category: category, type: type, value: value})
+        vetorDonation.push({category: category, type: type, value: value, year: year, month:month})
         setFinancialEvent(vetorDonation)
+
+        localStorage.setItem('Financial',JSON.stringify(financialEvent))
 
       }
 
+      window.location.href='/'
 
-      localStorage.setItem('Financial',JSON.stringify(financialEvent))
+    } else {
+
+      alert('Category and Type are required!')
+    }
+
+      
+
+
+     
+  
   }
 
   return (

@@ -17,7 +17,10 @@ export default function Spents (){
 
     // filter array infos //
   
-    
+    const date = new Date();
+    const month = date.getUTCMonth() + 1;
+    const year = date.getUTCFullYear();
+
       function getSpent(type) {
        
     
@@ -29,8 +32,17 @@ export default function Spents (){
             (item) => item.category === "Spent"
           );
 
+          const yearFlter = spentFilter.filter(
+            (item) => item.year === year
+          );
+  
+          const monthFlter = yearFlter.filter(
+            (item) => item.month === month
+          );
 
-          const typeFilter = spentFilter.filter(
+
+
+          const typeFilter = monthFlter.filter(
             (item) => item.type === `${type}`
           );
 
@@ -55,7 +67,7 @@ export default function Spents (){
   const data = {
     labels: ['water', 'energy', 'rent', 'gas', 'health', 'transport', 'food', 'recreation', 'education', 'credit card', 'others'], 
     datasets: [{
-      label: 'All Spents',
+      label: `All Spents in  ${month} - ${year}`,
       data: [getSpent('Water'), getSpent('Energy'), getSpent('Rent'), getSpent('Gas'), getSpent('Health'), getSpent('Transport'), getSpent('Food'), getSpent('Recreation'), getSpent('Education'), getSpent('Credit Card'), getSpent('Others')],
       backgroundColor: [
         'rgba(196, 10, 50, 0.6)',
