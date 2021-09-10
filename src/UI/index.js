@@ -27,6 +27,13 @@ export const Title = styled.h1 `
     margin: 1rem;
     font-weight: bold;
 
+
+    @media screen and (max-width: 767px) {
+
+
+      text-align: center;
+    }
+
 `
 
 
@@ -62,5 +69,19 @@ font-weight: bold;
 margin: 1rem;
 font-size: 1.4rem;
 
+
+`
+
+
+
+export const BoxType = styled.div `
+
+
+
+  @media screen and (max-width:767px) {
+
+
+    width: 90vw;
+  }
 
 `

@@ -15,6 +15,25 @@ const Table = styled.table`
   justify-content: flex-start;
   font-family: sans-serif;
   padding-bottom: 2rem;
+
+
+  @media screen and (min-width:768px) {
+  
+  width: 90vw;
+
+
+}
+
+
+  @media screen and (min-width:1024px) {
+  
+    width: auto;
+
+
+  }
+
+
+
 `;
 const Th = styled.th`
   width: 15rem;
@@ -27,6 +46,33 @@ const Th = styled.th`
   color: darkgray;
   font-weight: bold;
   margin-bottom: 1rem;
+
+
+
+  @media screen and (max-width:767px) {
+  
+    font-size: 0.8rem;
+    width: 2rem;
+    padding-left: 0.85rem;
+}
+
+
+@media screen and (min-width:768px) {
+  
+  width: 8rem;
+
+
+}
+
+@media screen and (min-width:1023px) {
+  
+    font-size: 1rem;
+    width: 5rem;
+
+    }
+
+
+
 `;
 
 const Td = styled(Th)`
@@ -34,6 +80,30 @@ const Td = styled(Th)`
   width: 15rem;
   border-bottom: 0rem;
   text-align: left;
+
+  
+  @media screen and (max-width:767px) {
+
+
+width: 2rem;
+}
+
+@media screen and (min-width:768px) {
+  
+  width: 8rem;
+
+
+}
+
+@media screen and (min-width:1023px) {
+  
+  font-size: 1rem;
+  width: 5rem;
+
+  }
+
+
+
 `;
 
 const Tr = styled.tr`
@@ -54,6 +124,13 @@ const ButtonDelete = styled.button `
 
         background-color: #383535;
     }
+
+
+    @media screen and (max-width:767px) {
+
+
+font-size: 0.5rem;
+}
 
 
 `

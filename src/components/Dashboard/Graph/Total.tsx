@@ -15,6 +15,15 @@ const BoxTotal = styled.div `
   flex-wrap: wrap;
   cursor: pointer;
 
+  @media screen and (max-width:767px) {
+
+
+    width: 90vw;
+    text-align: center;
+}
+
+
+
 `
 
 const Results = styled.p `

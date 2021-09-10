@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Bar} from 'react-chartjs-2';
+import { BoxType } from '../../../../UI';
 
 
 
@@ -104,14 +105,14 @@ const config = {
   };
 
     return (
-      <div>
+      <BoxType>
         <Bar
           data={data}
           width={400}
           height={200}
           className="graph"
         />
-      </div>
+      </BoxType>
     );
   
 };
