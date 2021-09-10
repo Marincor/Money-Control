@@ -10,7 +10,7 @@ export default function Footer() {
     <footer>
       <FooterTittle>
         Coded and created by:{" "}
-        <a href="https://github.com/Marincor" target="_blank">
+        <a href="https://github.com/Marincor" target="_blank" rel="noreferrer" >
           {" "}
           Marincor{" "}
         </a>{" "}

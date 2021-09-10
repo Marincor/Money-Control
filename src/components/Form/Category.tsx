@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { FormContext } from "../../contexts/form";
+import { FormContext } from "../../Contexts/Form/Form";
 import { Fieldset, Label, Legend } from "../../UI";
 
 export default function Category() {

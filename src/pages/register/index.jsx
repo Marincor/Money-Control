@@ -1,6 +1,6 @@
 import { BoxContainer, Title } from "../../UI";
-import Form from "../../components/Form/";
-import { FormProvider } from "../../contexts/form";
+import Form from "../../components/Form";
+import { FormProvider } from "../../Contexts/Form/Form";
 import Head from 'next/head'
 
 

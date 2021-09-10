@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import styled from "styled-components";
-import { FormContext } from "../../contexts/form";
+import { FormContext } from "../../Contexts/Form/Form"
 import Button from "./Button";
 import Category from "./Category";
 import Type from "./Type";

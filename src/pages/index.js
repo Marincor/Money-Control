@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Dashboard from "../components/Dashboard/index.tsx";
 import styles from "../styles/Home.module.css";
-import { FormProvider } from "../contexts/form/index.tsx";
+import { FormProvider } from "../Contexts/Form/Form";
 import { BoxContainer } from "../UI";
 import Footer from "../components/Footer/index.tsx";
 

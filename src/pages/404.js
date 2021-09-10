@@ -47,8 +47,8 @@ export default function Custom500() {
       </Head>
       <BoxPage404>
         <TitlePage404>
-          Error 404 - this page doesn't exist... comeback{" "}
-          <Link href="/"> here</Link>{" "}
+          Error 404 - this page doesn&apos;t exist... comeback
+          <Link href="/"> here</Link>
         </TitlePage404>
         <div>
           <Lottie options={defaultOptions} height={300} width={300} />
