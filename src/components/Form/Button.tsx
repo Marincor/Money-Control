@@ -29,7 +29,7 @@ export default function Button() {
   const date = new Date();
   const month = date.getUTCMonth() + 1;
   const year = date.getFullYear();
-
+  const id = Math.random() *25;
 
 
 
@@ -40,21 +40,21 @@ export default function Button() {
 
       if(category === 'Spent') {
         let vetorSpent = financialEvent || []
-        vetorSpent.push({category: category, type: type, value: value, year: year, month:month})
+        vetorSpent.push({category: category, type: type, value: JSON.parse( value), year: year, month:month, id: id})
         setFinancialEvent(vetorSpent)
         localStorage.setItem('Financial',JSON.stringify(financialEvent))
 
 
       } else if (category === 'Gain') {
         let vetorGain = financialEvent || []
-        vetorGain.push({category: category, type: type, value: value, year: year, month:month})
+        vetorGain.push({category: category, type: type, value: JSON.parse( value), year: year, month:month, id: id})
         setFinancialEvent(vetorGain)
         localStorage.setItem('Financial',JSON.stringify(financialEvent))
 
 
       } else {
         let vetorDonation = financialEvent || []
-        vetorDonation.push({category: category, type: type, value: value, year: year, month:month})
+        vetorDonation.push({category: category, type: type, value: JSON.parse( value), year: year, month:month, id: id})
         setFinancialEvent(vetorDonation)
 
         localStorage.setItem('Financial',JSON.stringify(financialEvent))

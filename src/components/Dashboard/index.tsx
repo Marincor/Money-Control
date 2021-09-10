@@ -4,6 +4,18 @@ import Graph from "./Graph/Graph";
 import RecentRegisters from "./RecentRegisters";
 import Lottie from 'react-lottie';
 import animationData from '../../assets/lotties/moneyplant.json';
+import styled from "styled-components";
+
+const TextAlert = styled.h2 `
+
+
+  font-size: 1.2rem;
+  font-family: sans-serif;
+  color: #463838;
+
+`
+
+
 
 export default function Dashboard() {
 
@@ -25,7 +37,8 @@ useEffect(()=>{
 
     const currentData = JSON.parse(localStorage.getItem("Financial"));
 
-    if (currentData) {
+
+    if (currentData && currentData.length > 0 ) {
 
         setThereIsData(true);
     }
@@ -37,8 +50,9 @@ useEffect(()=>{
     if (thereIsData) {
       return (
         <>
+          <TextAlert>Register 💰 ↳ <a href='/register'> something new</a></TextAlert>
           <Graph />
-
+        
           <RecentRegisters />
         </>
       );
@@ -49,7 +63,7 @@ useEffect(()=>{
         return(
             <>
             
-                <h2>Register an <a href='/register'> event</a>  to see something here!</h2>
+                <TextAlert>Register an 💰 ↳ <a href='/register'> event</a>  to see something here!</TextAlert>
         
         
                 <a href='/register'>  
