@@ -18,6 +18,12 @@ const Input = styled.input`
     height: 1rem;
     -webkit-appearance: none;
     width: 1rem;
+
+
+    :hover {
+
+      background-color: darkgray;
+    }
   }
 `;
 

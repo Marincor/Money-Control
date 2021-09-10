@@ -12,6 +12,13 @@ const ButtonPrimary = styled.button`
   margin: 1rem;
   padding: 0.5rem;
   width: 10rem;
+
+
+  :hover {
+
+
+    background-color: #4e054e;
+  }
 `;
 
 export default function Button() {

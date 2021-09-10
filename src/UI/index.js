@@ -37,6 +37,8 @@ flex-direction: ${(props)=>props.secondary? 'column': 'row'};
 align-items: center;
 justify-content: center;
 margin: 1rem 0rem;
+
+cursor: pointer;
 `
 
 export const Label = styled.label`
@@ -45,6 +47,11 @@ font-size: 1rem;
 font-weight: bold;
 margin: 1rem;
 cursor: pointer;
+
+:hover {
+
+    color: darkmagenta;
+}
 
 
 `
