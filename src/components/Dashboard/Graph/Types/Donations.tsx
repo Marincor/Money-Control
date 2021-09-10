@@ -4,9 +4,7 @@ import {Bar} from 'react-chartjs-2';
 
 
 
-export default function Spents (){
-    
-
+export default function Donations (){
     const [currentFinancialEvent, setcurrentFinancialEvent] = useState([]);
 
     useEffect(() => {
@@ -18,19 +16,19 @@ export default function Spents (){
     // filter array infos //
   
     
-      function getSpent(type) {
+      function getDonations(type) {
        
     
     
         if(currentFinancialEvent) {
     
     
-          const spentFilter = currentFinancialEvent.filter(
-            (item) => item.category === "Spent"
+          const gainFilter = currentFinancialEvent.filter(
+            (item) => item.category === "Donation"
           );
 
 
-          const typeFilter = spentFilter.filter(
+          const typeFilter = gainFilter.filter(
             (item) => item.type === `${type}`
           );
 
@@ -47,33 +45,26 @@ export default function Spents (){
        
       }
     
-
- 
       // graphs config //
 
-    
   const data = {
-    labels: ['water', 'energy', 'rent', 'gas', 'health', 'transport', 'food', 'recreation', 'education', 'credit card', 'others'], 
+    labels: ['ong', 'natural person', 'political campaign', 'others'], 
     datasets: [{
-      label: 'All Spents',
-      data: [getSpent('Water'), getSpent('Energy'), getSpent('Rent'), getSpent('Gas'), getSpent('Health'), getSpent('Transport'), getSpent('Food'), getSpent('Recreation'), getSpent('Education'), getSpent('Credit Card'), getSpent('Others')],
+      label: 'All Donations',
+      data: [getDonations("ONG"), getDonations("Natural person"), getDonations("Political campaign"), getDonations("Others")],
       backgroundColor: [
-        'rgba(196, 10, 50, 0.6)',
-        'rgba(196, 10, 50, 0.6)',
-        'rgba(196, 10, 50, 0.6)',
-        'rgba(196, 10, 50, 0.6)',
-        'rgba(196, 10, 50, 0.6)',
-        'rgba(196, 10, 50, 0.6)',
-        'rgba(196, 10, 50, 0.6)',
+        'rgba(233, 230, 38, 0.6)',
+        'rgba(233, 230, 38, 0.6)',
+        'rgba(233, 230, 38, 0.6)',
+        'rgba(233, 230, 38, 0.6)',
+      
       ],
       borderColor: [
         'rgb(37, 26, 29)',
         'rgb(37, 26, 29)',
         'rgb(37, 26, 29)',
         'rgb(37, 26, 29)',
-        'rgb(37, 26, 29)',
-        'rgb(37, 26, 29)',
-        'rgb(37, 26, 29)',
+ 
       ],
       borderWidth: 1
     }]

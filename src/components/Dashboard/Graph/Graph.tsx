@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components"
 import Category from "./Category";
+import Total from "./Total";
 import Type from "./Types/Types";
 
 const TitleGraph = styled.h2 `
@@ -14,15 +15,27 @@ const TitleGraph = styled.h2 `
 
 `
 
+const BoxGraph = styled.div `
+
+
+  display: flex;
+  width: 100rem;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+`
+
 export default function Graph() {
  
 
 
   return (
-    <div>
+    <BoxGraph>
       <TitleGraph>Events in $</TitleGraph>
       <Category />
       <Type />
-    </div>
+      <Total />
+    </BoxGraph>
   );
 }

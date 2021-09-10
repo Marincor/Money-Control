@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import { Doughnut } from "react-chartjs-2";
+import styled from "styled-components"
+
+const BoxCategory =  styled.div `
+
+    display: flex;
+    width: 20rem;
+
+`
 
 export default function Category () {
     const [currentFinancialEvent, setcurrentFinancialEvent] = useState([]);
@@ -90,10 +98,10 @@ export default function Category () {
   
 
     return(
-        <>  
+        <BoxCategory>  
         
-        <Doughnut className="graph" data={data} width={400} height={400} />
-         </>
+        <Doughnut className="graph" data={data} width={1} height={1} />
+         </BoxCategory>
 
       
 
