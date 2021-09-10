@@ -30,7 +30,7 @@ export default function Type() {
 
   const spentOptions = (
     <>
-     <Option value="">.</Option>
+      <Option value="">.</Option>
       <Option value="Water">Water</Option>
       <Option value="Energy">Energy</Option>
       <Option value="Rent">Rent</Option>
@@ -55,34 +55,22 @@ export default function Type() {
   );
   const donateOptions = (
     <>
-     <Option value="">.</Option>
+      <Option value="">.</Option>
       <Option value="ONG">ONG</Option>
       <Option value="Natural person">Natural person</Option>
       <Option value="Political campaign">Political campaign</Option>
       <Option value="Others">Others</Option>
-      
     </>
   );
 
   function renderOptions() {
-
-    if(category === "Spent" ) {
-
-      return(
-        spentOptions
-      )
-    } else if(category === "Gain" ) {
-
-        return(
-          gainOptions
-        )
-    } else{
-
-       return( donateOptions )
+    if (category === "Spent") {
+      return spentOptions;
+    } else if (category === "Gain") {
+      return gainOptions;
+    } else {
+      return donateOptions;
     }
-
-
-
   }
 
   return (
@@ -93,7 +81,7 @@ export default function Type() {
         name="type"
         id="type"
         onChange={(e) => {
-         setType(e.target.value);
+          setType(e.target.value);
         }}
       >
         {renderOptions()}

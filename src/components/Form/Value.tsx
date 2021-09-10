@@ -19,16 +19,14 @@ const Input = styled.input`
     -webkit-appearance: none;
     width: 1rem;
 
-
     :hover {
-
       background-color: darkgray;
     }
   }
 `;
 
 export default function Value() {
-  const {value, setValue} = useContext(FormContext)
+  const { value, setValue } = useContext(FormContext);
 
   return (
     <Fieldset secondary>
@@ -41,8 +39,10 @@ export default function Value() {
         max="10000"
         step="0.01"
         id="price"
-        onChange={(e:any)=>{ setValue(e.target.value)}}
-        onKeyPress={(e)=>console.log(e)}
+        onChange={(e: any) => {
+          setValue(e.target.value);
+        }}
+        onKeyPress={(e) => console.log(e)}
       />
     </Fieldset>
   );
