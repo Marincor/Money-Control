@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FormContext } from "../../contexts/form";
 
 const ButtonPrimary = styled.button`
+
   background-color: darkmagenta;
   border-radius: 1rem;
   color: white;

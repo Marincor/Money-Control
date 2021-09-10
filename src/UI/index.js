@@ -7,8 +7,9 @@ export const BoxContainer = styled.div `
     background-color: white;
     display: flex;
     justify-content: flex-start;
-    height: 100vh;
-
+    height: ${(props)=> props.secondary? 'auto': '100vh'};
+    width: 100vw;
+    overflow-x: hidden;
 
     .graph{
 

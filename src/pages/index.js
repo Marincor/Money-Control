@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Dashboard from '../components/Dashboard/index.tsx'
 import styles from '../styles/Home.module.css'
 import {FormProvider} from '../contexts/form/index.tsx'
+import { BoxContainer } from '../UI'
 
 export default function Home() {
   return (
@@ -11,7 +12,8 @@ export default function Home() {
         <meta name="description" content="Control and manage your money with Money Control!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+
+      <BoxContainer>
        <FormProvider> 
 
        <Dashboard/>
@@ -19,7 +21,7 @@ export default function Home() {
 
      
           
-      </div>
+      </BoxContainer>
    
     </div>
   )
