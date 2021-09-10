@@ -3,6 +3,7 @@ import Dashboard from '../components/Dashboard/index.tsx'
 import styles from '../styles/Home.module.css'
 import {FormProvider} from '../contexts/form/index.tsx'
 import { BoxContainer } from '../UI'
+import Footer from '../components/Footer/index.tsx'
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
      
           
       </BoxContainer>
+      <Footer />
    
     </div>
   )
