@@ -66,7 +66,7 @@ export default function Dashboard() {
           </TextAlert>
 
           <Link passHref href="/register">
-            <div>
+            <div >
               <Lottie options={defaultOptions} height={400} width={400} />
             </div>
           </Link>
