@@ -15,16 +15,17 @@ export default function Category() {
       <Legend>Category</Legend>
       <Label htmlFor="Spent">
         Spent
-        <input type="radio" id="Spent" name="category" value="Spent" required />
+        <input type="radio" data-cy='spent' id="Spent" name="category" value="Spent" required />
       </Label>
       <Label htmlFor="Gain">
         Gain
-        <input type="radio" id="Gain" name="category" value="Gain" required />
+        <input type="radio" data-cy='gain' id="Gain" name="category" value="Gain" required />
       </Label>
       <Label htmlFor="Donation">
         Donation
         <input
           type="radio"
+          data-cy='donation'
           id="Donation"
           name="category"
           value="Donation"

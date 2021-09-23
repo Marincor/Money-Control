@@ -1,4 +1,3 @@
-
 describe("When the user first access to the page, shows", () => {
   it("The dashboard name", () => {
     cy.visit("/");
@@ -17,42 +16,23 @@ describe("When the user first access to the page, shows", () => {
   });
   it("The lottie animation", () => {
     cy.visit("/");
-    cy.get('svg').should('to.have.length', 1)
+    cy.get("svg").should("to.have.length", 1);
   });
-
-
 });
-describe('When click', ()=>{
+describe("When click", () => {
+  it("on the event, goes to the page of register", () => {
+    cy.visit("/");
 
-
-    it('on the event, goes to the page of register', ()=>{
-
-
-
-        cy.visit('/');
-
-        cy.get('a').should('have.attr', 'href').and('include', 'register');
-        cy.get('a')
-        .eq(0)
-        .click()
+    cy.get("a").should("have.attr", "href").and("include", "register");
+    cy.get("a").eq(0).click();
+  });
+  it("on the creator name, goes to the github page", () => {
+    cy.visit("/").then((e) => {
+      cy.get("a")
+        .eq(1)
+        .should("have.attr", "href")
+        .and("include", "https://github.com/Marincor");
+      cy.get("a").eq(1).click();
     });
-    it('on the creator name, goes to the github page', ()=>{
-
-
-
-        cy.visit('/').then( e => {
-
-            cy.get('a').eq(1).should('have.attr', 'href').and('include', 'https://github.com/Marincor');
-            cy.get('a')
-            .eq(1)
-            .click()
-
-        }
-
-        )
-
-      
-    })
-
-
-})
+  });
+});
