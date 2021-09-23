@@ -54,7 +54,11 @@ Aplicação para controle e gerenciamento de gastos. Foi criada com a ideia de t
  
 - Styled Components - React Lottie - ChartJs
 
+# Testes
 
+Testes incluídos usando Cypress
+
+<img  width='50px' src='https://cdn.auth0.com/blog/cypress-tests/logo.png' alt='chartJs-logo'/> 
 
 # en - version
 
@@ -112,3 +116,10 @@ Application to control and manage your spending. It was built with the idea to h
  
  
 - Styled Components - React Lottie - ChartJs
+
+
+# Tests
+
+Tests included using Cypress
+
+<img  width='50px' src='https://cdn.auth0.com/blog/cypress-tests/logo.png' alt='chartJs-logo'/> 
