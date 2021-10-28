@@ -213,7 +213,7 @@ export default function Total() {
 
     if (cashIn < cashOut) {
       currentOptions = defaultOptions2;
-      message = "Your costs are to expensive!";
+      message = "Your costs are too expensive!";
     }
 
     return (
